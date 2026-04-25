@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# Coopstar - Soluções em Cooperativismo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação web moderna, responsiva e de alta performance desenvolvida para a Coopstar. Este projeto utiliza tecnologias de ponta para oferecer uma experiência de usuário excepcional e um design profissional.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+*   **React 19**: Biblioteca para construção de interfaces de usuário.
+*   **Vite**: Ferramenta de build extremamente rápida.
+*   **TypeScript**: Tipagem estática para maior segurança e produtividade.
+*   **Tailwind CSS**: Framework CSS utilitário para design moderno e responsivo.
+*   **Framer Motion**: Biblioteca para animações fluidas e interativas.
+*   **Lucide React**: Conjunto de ícones bonitos e consistentes.
 
-## React Compiler
+## 📦 Estrutura do Projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O projeto segue uma arquitetura de componentes modular e organizada:
 
-## Expanding the ESLint configuration
+*   `src/components/`: Contém todos os componentes da interface (Navbar, Hero, About, etc).
+*   `src/assets/`: Imagens e recursos estáticos.
+*   `public/`: Arquivos públicos como favicon e logos.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Como Executar Localmente
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/Anjos-GABRIEL/ProjetocoopstarSenai-.git
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
+
+3.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
+    O servidor estará disponível em `http://localhost:5173`.
+
+4.  **Para rodar com acesso remoto na rede:**
+    ```bash
+    npm run dev -- --host
+    ```
+
+## 🏗️ Build para Produção
+
+Para gerar a versão otimizada para publicação:
+
+```bash
+npm run build
 ```
+Os arquivos gerados estarão na pasta `dist/`.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📄 Licença
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Este projeto foi desenvolvido como parte de um processo de refatoração para a Coopstar.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+Desenvolvido por **Anjos-GABRIEL**.
